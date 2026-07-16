@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapyBite</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="capy-header">
+        <img id="capybara" src="/assets/skin_pixel/story1.png?v=23" width="72" height="72" alt="capybara" style="image-rendering: pixelated;" />
+        <div>
+          <div class="capy-title">CapyBite</div>
+          <div id="capy-stage" class="capy-stage">대기 중...</div>
+        </div>
+      </div>
+
+      <div class="row-list">
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/cpu.png?v=3" alt="CPU" />
+          <div class="row-body">
+            <div class="row-title"><span data-i18n="cpu"></span> <span id="cpu-percent" class="row-value">0%</span></div>
+            <div class="row-detail" id="cpu-detail">-</div>
+            <div class="bar"><div id="cpu-bar" class="bar-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/memory.png?v=3" alt="Memory" />
+          <div class="row-body">
+            <div class="row-title"><span data-i18n="memory"></span> <span id="mem-percent" class="row-value">0%</span></div>
+            <div class="row-detail" id="mem-detail">-</div>
+            <div class="bar"><div id="mem-bar" class="bar-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/storage.png?v=3" alt="Storage" />
+          <div class="row-body">
+            <div class="row-title"><span data-i18n="storage"></span> <span id="disk-percent" class="row-value">0%</span></div>
+            <div class="row-detail" id="disk-detail">-</div>
+            <div class="bar"><div id="disk-bar" class="bar-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/battery.png?v=3" alt="Battery" />
+          <div class="row-body">
+            <div class="row-title"><span data-i18n="battery"></span> <span id="battery-percent" class="row-value">-</span></div>
+            <div class="row-detail" id="battery-detail">-</div>
+            <div class="bar"><div id="battery-bar" class="bar-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/network.png?v=3" alt="Network" />
+          <div class="row-body">
+            <div class="row-title"><span data-i18n="network"></span> <span id="network-iface"></span></div>
+            <div class="row-detail" id="network-detail">-</div>
+            <canvas id="network-chart" class="chart" width="280" height="40"></canvas>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/uptime.png?v=3" alt="Uptime" />
+          <div class="row-body">
+            <div class="row-title" data-i18n="uptime"></div>
+            <div class="row-detail" id="uptime-detail">-</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <img class="row-icon-img" src="/assets/icons/carrot.png" alt="Carrot" />
+          <div class="row-body">
+            <div class="row-title" data-i18n="carrotEaten"></div>
+            <div class="row-detail" id="carrot-count">0개</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skin-picker">
+        <div class="skin-picker-row">
+          <span class="skin-label">Language</span>
+          <div class="dropdown" id="lang-dropdown" data-value="ko">
+            <button type="button" class="dropdown-toggle" id="lang-dropdown-toggle"></button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item" data-value="ko">한국어</div>
+              <div class="dropdown-item" data-value="en">English</div>
+              <div class="dropdown-item" data-value="ja">日本語</div>
+              <div class="dropdown-item" data-value="zh">中文</div>
+              <div class="dropdown-item" data-value="ru">Русский</div>
+              <div class="dropdown-item" data-value="es">Español</div>
+              <div class="dropdown-item" data-value="fr">Français</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="quit-btn" class="open-window-btn accent-btn" data-i18n="quit"></button>
+    </main>
+  </body>
+</html>
