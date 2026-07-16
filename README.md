@@ -26,12 +26,6 @@
 
 ![CapyBite system monitor showing CPU, memory, storage, battery, network, and uptime](docs/images/capybite-system-monitor.png)
 
-## A RunCat alternative with its own character
-
-CapyBite is for people who enjoy CPU-reactive menu bar characters and want a capybara-focused alternative. Instead of a running cat, CapyBite shows a capybara eating carrots and places the main Mac system readings in one popover.
-
-CapyBite is independently developed and is not affiliated with, endorsed by, or derived from the RunCat project. See the [factual comparison](https://capybite.pages.dev/runcat-alternative) on the official website.
-
 ## Requirements
 
 - macOS 12 or later
